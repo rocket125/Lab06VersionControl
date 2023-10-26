@@ -20,7 +20,13 @@ def encode(in_code):
     
     return new_code
 def decode(encoded_code):
-    raise NotImplementedError()
+    code = str(encoded_code)
+    decoded_code = ""
+    for i in code:
+        digit = (int(i)-3) % 10
+        decoded_code = decoded_code + str(digit)
+
+    return decoded_code
 
 if __name__ == "__main__":
     while quitting is False:
